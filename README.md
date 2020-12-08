@@ -13,7 +13,7 @@ Die Aufgabenstellung finden Sie [hier](AUFGABENSTELLUNG.md).
 
 1. Navigieren Sie zu einem Ordner Ihrer Wahl, in dem Sie das Projekt erstellen möchten
 2. Öffnen Sie die Konsole (Windows Eingabeaufforderung *cmd*, Windows *PowerShell*, Mac *Terminal*)
-3. Klonen Sie das Projekt (Template) mittels `git clone http://im-lamport:1080/vs/rest-student-template.git`; alternativ können Sie sich das Projekt aus gezippt herunterladen, nutzen Sie hierzu den Download-Button oben (in diesem Fall bitte beachten, dass das eigentliche Projektverzeichnis nochmals in einem Verzeichnis kopiert wird; zu öffnen ist das "innere" Verzeichnis!)
+3. Klonen Sie das Projekt (Template) mittels `git clone https://gitlab.oth-regensburg.de/jod39747/rest-student-template.git`; alternativ können Sie sich das Projekt aus gezippt herunterladen, nutzen Sie hierzu den Download-Button oben (in diesem Fall bitte beachten, dass das eigentliche Projektverzeichnis nochmals in einem Verzeichnis kopiert wird; zu öffnen ist das "innere" Verzeichnis!)
 4. Starten Sie IntelliJ IDEA
 5. Wählen Sie *Open* (nicht *Import*!) und wählen Sie das neu geklonte/kopierte Projektverzeichnis "rest-student-template" aus
 ![Start-Dialog in Intellij IDEA zum Öffnen des geklonten Projekts](1open.jpg)
