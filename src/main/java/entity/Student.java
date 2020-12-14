@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.*;
 import java.util.Objects;
 
 @XmlRootElement
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
 
     @XmlAttribute
