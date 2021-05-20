@@ -6,7 +6,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import service.StudentService;
 
 import javax.swing.*;
-import javax.ws.rs.ext.RuntimeDelegate;
+import jakarta.ws.rs.ext.RuntimeDelegate;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 

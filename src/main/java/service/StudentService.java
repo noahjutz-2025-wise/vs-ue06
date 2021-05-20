@@ -2,8 +2,8 @@ package service;
 
 import entity.Student;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
