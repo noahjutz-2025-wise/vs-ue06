@@ -1,6 +1,7 @@
 package entity;
 
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
+
 import java.util.Objects;
 
 @XmlRootElement
