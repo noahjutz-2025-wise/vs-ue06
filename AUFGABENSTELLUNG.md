@@ -1,11 +1,13 @@
 # Aufgabenstellung: Implementierung einer RESTful-Webservices-API für einen "Student Service"
 
-Nutzen Sie für die Aufgabenstellung das vorliegende Projekttemplate und führen Sie die vorbereitenden Tätigkeiten aus, wie sie in der [README-Datei](README.md) beschrieben sind.
+Nutzen Sie für die Aufgabenstellung das vorliegende Projekttemplate und führen Sie die vorbereitenden Tätigkeiten aus,
+wie sie in der [README-Datei](README.md) beschrieben sind.
 
 ## Mapping von Entitätsklassen auf XML und JSON (XML- und JSON-Binding)
 
-Im Package `entity` befindet sich die Entitäts-Klasse `Student`. Diese ist mit der Annotation `@XmlRootElement` versehen und hat einen Konstruktor ohne Parameter.
-Erklären Sie, wofür beide notwendig sind und erklären Sie auch die Wirkungsweise der weiteren Annotationen `@XmlRootElement`, `@XmlAccessorType`, `@XmlAttribute` oder `@XmlTransient` für ein XML-Binding.
+Im Package `entity` befindet sich die Entitäts-Klasse `Student`. Diese ist mit der Annotation `@XmlRootElement` 
+versehen und hat einen Konstruktor ohne Parameter. Erklären Sie, wofür beide notwendig sind und erklären Sie auch 
+die Wirkungsweise der weiteren Annotationen `@XmlAccessorType`, `@XmlAttribute` oder `@XmlTransient` für ein XML-Binding.
 
 Erstellen Sie eine weitere Klasse `Adresse` mit den Attributen `strasse`, `plz` und `ort`.
 

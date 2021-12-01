@@ -17,9 +17,9 @@ Die Aufgabenstellung finden Sie [hier](AUFGABENSTELLUNG.md).
 4. Starten Sie IntelliJ IDEA
 5. Wählen Sie *Open* (nicht *Import*!) und wählen Sie das neu geklonte/kopierte Projektverzeichnis "rest-student-template" aus
 ![Start-Dialog in Intellij IDEA zum Öffnen des geklonten Projekts](1open.jpg)
-6. Stellen Sie nun ggf. noch das JDK/SDK für Ihr Projekt ein. Öffnen Sie dazu die "Module Settings" durch rechten Mausklick auf den Projekt-Root-Ordner "rest-student-template" und wählen Sie "Open Module Settings". Im Tab "Project" wählen Sie das installierte SDK aus ("OpenJDK 1x" in den CIP-Pools, Pfad `C:\Program Files\Java\jdk1_`, siehe nachfolgendes Beispiel ) oder legen Sie entsprechend einen neuen SDK-Eintrag an. Beispiel:
-![SDK-Einstellungen für das Projekt](2sdk.jpg)
-Ändern Sie die Konfigurationsdatei `pom.xml` entsprechend der darin gesetzten Kommentare ab (Änderungen an drei Stellen)
+6. Stellen Sie nun ggf. noch das JDK/SDK für Ihr Projekt ein. Öffnen Sie dazu die "Module Settings" durch rechten Mausklick auf den Projekt-Root-Ordner "rest-student-template" und wählen Sie "Open Module Settings". Im Tab "Project" wählen Sie Ihr installiertes SDK aus oder nutzen die Möglichkeit, ein JDK über diesen Dialog zu laden. Beispiel:
+![SDK-Auswahl für das Projekt](2sdk_download.png)
+7. Ändern Sie die Konfigurationsdatei [`pom.xml`](pom.xml) den Eintrag für die Javaversion: `<java.version>16</java.version>` (Zeile 12)
 
 
 ## JAX-RS 2.1 RESTful Webservices in Java mit JAX-RS und Jersey
