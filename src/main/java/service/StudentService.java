@@ -5,20 +5,19 @@ import entity.Student;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 
 public class StudentService {
 
     private static int nextStudentId = 1;
-    // private static Map<Integer, Student> studentDb;  // kann als interne Datenbank verwendet werden
-
+    // private static ConcurrentMap<Integer, Student> studentDb = new ConcurrentHashMap<>();  // kann als interne Datenbank verwendet werden
 
     public Student matriculate(Student s) {
 
         // Methode annotieren und ausimplementieren und folgende "throw"-Anweisung löschen!
-        throw new IllegalStateException("method 'matriculate' needs to be implemented first");
+        throw new IllegalStateException("method 'exmatriculate' needs to be implemented first");
 
     }
 
