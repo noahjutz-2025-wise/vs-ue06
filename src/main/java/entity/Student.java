@@ -9,46 +9,46 @@ import java.util.Objects;
 public class Student {
 
     @XmlAttribute
-    private int matrikelNr;
-    private String vorname;
-    private String nachname;
+    private int studentNumber;
+    private String firstName;
+    private String lastName;
 
     // Default-Konstruktor zwingend notwendig
     public Student() {}
 
-    public Student(String vorname, String nachname) {
-        this.vorname = vorname;
-        this.nachname = nachname;
+    public Student(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public Student(int matrikelNr, String vorname, String nachname) {
-        this(vorname, nachname);
-        this.matrikelNr = matrikelNr;
+    public Student(int studentNumber, String firstName, String lastName) {
+        this(firstName, lastName);
+        this.studentNumber = studentNumber;
     }
 
 
-    public int getMatrikelNr() {
-        return matrikelNr;
+    public int getStudentNumber() {
+        return studentNumber;
     }
 
-    public void setMatrikelNr(int matrikelNr) {
-        this.matrikelNr = matrikelNr;
+    public void setStudentNumber(int studentNumber) {
+        this.studentNumber = studentNumber;
     }
 
-    public String getVorname() {
-        return vorname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setVorname(String vorname) {
-        this.vorname = vorname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getNachname() {
-        return nachname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setNachname(String nachname) {
-        this.nachname = nachname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
@@ -56,12 +56,12 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return matrikelNr == student.matrikelNr;
+        return studentNumber == student.studentNumber;
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(matrikelNr);
+        return Objects.hash(studentNumber);
     }
 }
