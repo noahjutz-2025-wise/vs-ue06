@@ -24,7 +24,7 @@ Ergänzen Sie die Klasse `StudentService` um alle notwendigen JAX-RS-Annotatione
 
 Die URI einer `Student`-Ressource inkl. dem *Resource-Identifier* (der Primärschlüssel, hier die Matrikelnummer) `981234` sei beispielhaft:
 
-`http://localhost:8081/restapi/studentaffairs/students/981234`
+`http://localhost:8081/restapi/students/981234`
 
 Als Regel für diese Aufgabe gilt, dass der *Resource-Identifier* für alle Methoden außer `POST` Teil der URI sein muss.
 

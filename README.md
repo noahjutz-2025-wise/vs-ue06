@@ -22,7 +22,7 @@ Die Aufgabenstellung finden Sie [hier](AUFGABENSTELLUNG.md).
 7. Ändern Sie die Konfigurationsdatei [`pom.xml`](pom.xml) den Eintrag für die Javaversion: `<java.version>16</java.version>` (Zeile 12)
 
 
-## JAX-RS 2.1 RESTful Webservices in Java mit JAX-RS und Jersey
+## JAX-RS 3.0 RESTful Webservices in Java mit JAX-RS und Jersey
 
 [Jakarta RESTful Web Services 3.0](https://jakarta.ee/specifications/restful-ws/3.0) spezifiziert die Unterstützung von RESTful-Webservice-APIs in Java. 
 
