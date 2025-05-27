@@ -37,7 +37,7 @@ Sofern Ihr Projekt über eine funktionierende RESTful-Webservice-API verfügt, t
 Nutzen Sie die Annotationen `@Consumes` und `@Produces`, so dass individuell nur JSON, nur XML oder explizit beide als zulässige Request- und/oder Response-Parameter zulässig sind.
 
 Die Paramter der Methode `getStudentsByRange` sollen als *"Query-Parameter"* `from` und `to` übergeben werden.
-Nutzen Sie hierfür die Annotation `@QueryParam`. Der Requestparameter würde dann wie folgt lauten: `/restapi/studentaffairs/students?from=123&to=301` 
+Nutzen Sie hierfür die Annotation `@QueryParam`. Der Requestparameter würde dann wie folgt lauten: `/restapi/students?from=123&to=301` 
 
 ## Tests
 
