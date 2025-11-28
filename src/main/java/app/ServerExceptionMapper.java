@@ -13,7 +13,7 @@ public class ServerExceptionMapper implements ExceptionMapper<Throwable> {
         // Klasse fängt alle internen Fehler, gibt sie auf der Server-Konsole aus und ...
         t.printStackTrace();
 
-        // ... sendet sie auch an den Client
+        // ... sendet sie mit Statuscode 500 INTERNAL SERVER ERROR an den Client
         return Response.serverError()
                        .entity(t.getMessage())
                        .build();

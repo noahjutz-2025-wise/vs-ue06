@@ -5,18 +5,20 @@ import com.sun.net.httpserver.HttpServer;
 import org.glassfish.jersey.server.ResourceConfig;
 import service.StudentService;
 
-import javax.swing.*;
 import jakarta.ws.rs.ext.RuntimeDelegate;
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.concurrent.CountDownLatch;
 
 public class Server {
 
-    public static void main(String[] args) throws IOException {
+    public static CountDownLatch SHUTDOWN_LATCH = new CountDownLatch(1);
+
+    public static void main(String[] args) throws IOException, InterruptedException {
         // Create configuration object for webserver instance
         ResourceConfig config = new ResourceConfig();
         // Register REST-resources (i.e. service classes) with the webserver
-        config.register(ServerExceptionMapper.class);
+        config.register(ServerExceptionMapper.class); // generic error handling
         config.register(StudentService.class);
         // add further REST-resources like this:
         // config.register(XyzService.class);
@@ -25,11 +27,11 @@ public class Server {
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
         HttpHandler handler = RuntimeDelegate.getInstance().createEndpoint(config, HttpHandler.class);
         // Context is part of the URI directly after  http://domain.tld:port/
-        server.createContext("/restapi", handler);
+        server.createContext("/api/v1", handler);
         server.start();
 
-        // Show dialogue in order to prevent premature ending of server(s)
-        JOptionPane.showMessageDialog(null, "Stop server...");
+        // Wait for main thread to end
+        SHUTDOWN_LATCH.await(); // whoever is calling SHUTDOWN_LATCH.countDown() will end the server
         server.stop(0);
     }
 }
