@@ -3,48 +3,42 @@ package service;
 import entity.Student;
 import jakarta.ws.rs.*;
 import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class StudentService {
 
-  private static AtomicInteger nextStudentId = new AtomicInteger(1);
+  private static final AtomicInteger nextStudentId = new AtomicInteger(1);
 
-  // private static ConcurrentMap<Integer, Student> studentDb = new ConcurrentHashMap<>();  // kann
-  // als interne Datenbank verwendet werden
+  private static final ConcurrentMap<Integer, Student> studentDb = new ConcurrentHashMap<>();
 
   public Student matriculate(Student s) {
-
-    // Methode annotieren und ausimplementieren und folgende "throw"-Anweisung löschen!
-    throw new IllegalStateException("method 'exmatriculate' needs to be implemented first");
+    final var id = nextStudentId.getAndIncrement();
+    s.setStudentNumber(id);
+    return studentDb.put(id, s);
   }
 
   public Student exmatriculate(int studentId) {
-
-    // Methode annotieren und ausimplementieren und folgende "throw"-Anweisung löschen!
-    throw new IllegalStateException("method 'exmatriculate' needs to be implemented first");
+    return studentDb.remove(studentId);
   }
 
   public Student getStudentById(int studentId) {
-
-    // Methode annotieren und ausimplementieren und folgende "throw"-Anweisung löschen!
-    throw new IllegalStateException("method 'getStudentById' needs to be implemented first");
+    return studentDb.get(studentId);
   }
 
   public Student updateStudentAccount(int studentId, Student newData) {
-
-    // Methode annotieren und ausimplementieren und folgende "throw"-Anweisung löschen!
-    throw new IllegalStateException("method 'updateStudentAccount' needs to be implemented first");
+    return studentDb.put(studentId, newData);
   }
 
   public Collection<Student> getAllStudents() {
-
-    // Methode annotieren und ausimplementieren und folgende "throw"-Anweisung löschen!
-    throw new IllegalStateException("method 'getAllStudents' needs to be implemented first");
+    return studentDb.values();
   }
 
   public Collection<Student> getStudentsByRange(int fromStudentId, int toStudentId) {
-
-    // Methode annotieren und ausimplementieren und folgende "throw"-Anweisung löschen!
-    throw new IllegalStateException("method 'getStudentsByRange' needs to be implemented first");
+    return studentDb.values().stream()
+        .filter(s -> s.getStudentNumber() >= fromStudentId && s.getStudentNumber() < toStudentId)
+        .collect(Collectors.toSet());
   }
 }
