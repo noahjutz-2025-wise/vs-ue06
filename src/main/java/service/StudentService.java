@@ -2,6 +2,8 @@ package service;
 
 import entity.Student;
 import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Response;
+
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -37,6 +39,11 @@ public class StudentService {
   @PUT
   @Path("{id}")
   public Student updateStudentAccount(@PathParam("id") int studentId, Student newData) {
+    if (newData.getStudentNumber() != studentId) {
+      // FIXME returns error 500 and not 400
+      throw new WebApplicationException(
+          "Student number does not match", Response.Status.BAD_REQUEST);
+    }
     return studentDb.put(studentId, newData);
   }
 
