@@ -11,6 +11,8 @@ public class Adresse {
   private String plz;
   private String ort;
 
+  public Adresse() {}
+
   public String getStrasse() {
     return strasse;
   }
