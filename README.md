@@ -23,3 +23,20 @@ Installieren Sie hierzu ein passendes Plugin für Ihren Browser, z. B. [RESTer f
 
 Alternativ sind auch ein Kommandozeilentool wie [HTTPie](https://httpie.io) oder ein umfänglicheres Testtool wie [Postman](https://www.postman.com/product/api-client/) möglich.
 
+- Create
+  ```shell
+  cat jeffery.xml | http POST localhost:8081/api/v1/students/ Content-Type:application/xml
+  ```
+- Read
+  ```shell
+  http localhost:8081/api/v1/students/1
+  http localhost:8081/api/v1/students/all
+  ```
+- Update
+  ```shell
+  cat luna.xml | http PUT localhost:8081/api/v1/students/1 Content-Type:application/xml
+  ```
+- Delete
+  ```shell
+  http DELETE localhost:8081/api/v1/students/2
+  ```
