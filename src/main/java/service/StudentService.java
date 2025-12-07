@@ -37,6 +37,8 @@ public class StudentService {
   }
 
   @PUT
+  @Produces("application/xml")
+  @Consumes("application/xml")
   @Path("{id}")
   public Student updateStudentAccount(@PathParam("id") int studentId, Student newData) {
     if (newData.getStudentNumber() != studentId) {
