@@ -42,7 +42,12 @@ public class StudentService {
     if (newData.getStudentNumber() != studentId) {
       // FIXME returns error 500 and not 400
       throw new WebApplicationException(
-          "Student number does not match", Response.Status.BAD_REQUEST);
+          "Student number ("
+              + newData.getStudentNumber()
+              + ") does not match id ("
+              + studentId
+              + ")",
+          Response.Status.BAD_REQUEST);
     }
     return studentDb.put(studentId, newData);
   }
